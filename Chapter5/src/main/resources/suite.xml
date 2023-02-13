@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--与suitetest 和suiteconfig有一些关联关系的-->
+<!--测试套件包裹最外层-->
+<suite name="test">
+<!--SuiteConfig在整个包裹的test标签都是生效的-->
+    <test name="login">
+        <classes>
+            <!--先引入套件配置，name后面就是包名-->
+            <class name="com.course.testng.suite.SuiteConfig"/>
+            <class name="com.course.testng.suite.LoginTest"/>
+        </classes>
+
+    </test>
+
+    <test name="pay">
+        <classes>
+            <class name="com.course.testng.suite.SuiteConfig"/>
+            <class name="com.course.testng.suite.PayTest"/>
+
+        </classes>
+    </test>
+</suite>
